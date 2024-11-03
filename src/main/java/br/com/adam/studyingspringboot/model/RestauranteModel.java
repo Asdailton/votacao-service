@@ -21,6 +21,9 @@ public class RestauranteModel extends RepresentationModel<RestauranteModel> impl
     @OneToMany(mappedBy = "restaurante", cascade = CascadeType.ALL)
     private List<VoteModel> votes;
 
+    @Column(name = "cor_restaurante", nullable = false)
+    private String cor;
+
     public long getId() {
         return id;
     }

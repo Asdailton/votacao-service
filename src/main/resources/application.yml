@@ -1,21 +1,17 @@
-
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/rest_with_spring_boot?useTimezone=true&serverTimezone=UTC
-    username: root
-    password: root
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/happdine
+    username: postgres
+    password: 1234
   main:
     allow-circular-references: true
 
-
   open-in-view: false
   jpa:
-
-      hibernate:
-        ddl-auto: update
-
-      show-sql: false
+    hibernate:
+      ddl-auto: update
+    show-sql: false
 
 server:
   error:
@@ -25,4 +21,3 @@ api:
   security:
     token:
       secret: 1234567
-
